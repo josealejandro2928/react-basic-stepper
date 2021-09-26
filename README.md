@@ -13,7 +13,7 @@ npm install --save react-basic-stepper
 ## Usage
 
 The react-basic-stepper provide a two component to recreate a wizard-like workflow by dividing content into logical steps.
-You have <Stepper> that is the wrapper steps components and the <Step> component.
+You have **Stepper** that is the wrapper steps components and the **Step** component.
 **You must import the styles of these components**
 
 ```tsx
