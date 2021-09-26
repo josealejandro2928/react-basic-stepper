@@ -1,0 +1,53 @@
+.container {
+  max-width: 100%;
+  padding: 0px 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 1080px;
+}
+
+.Section {
+  margin: 32px 0px;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, .2);
+
+  .description {
+    // color: #fafafa;
+    font-size: 14px;
+    margin: 4px 0px;
+    font-style: italic;
+    margin-bottom: 1rem;
+
+  }
+
+}
+
+.markDownSection {
+  height: 250px;
+  overflow: auto;
+  background-color: rgb(238, 238, 238);
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 1rem 0rem;
+  border-radius: 4px;
+  max-width: 100%;
+  width: 650px;
+
+  @media screen and (max-width: 1080px) {
+    width: 450px;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 650px;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 330px;
+  }
+
+  code {
+    font-size: 15px;
+    color: #1d49cc;
+  }
+}

@@ -1,0 +1,155 @@
+.stepper-horizontal {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepper-vertical {
+  display: flex;
+  flex-direction: row;
+}
+
+.body-horizontal {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 16px;
+  padding-top: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  height: auto;
+}
+
+.body-vertical {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 16px;
+  padding-top: 0px;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  height: auto;
+}
+
+.step-container {
+  visibility: hidden;
+  width: 100%;
+  height: auto;
+  transform: none;
+  transition: transform .375s ease;
+}
+
+.header-horizontal {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  color: inherit;
+  min-height: 32px;
+  align-items: center;
+  overflow-x: auto;
+  text-align: center;
+
+  .label {
+    display: flex;
+    z-index: 2;
+    padding: 16px;
+    flex-wrap: wrap;
+    background-color: inherit;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+
+    &:hover {
+      filter: brightness(1.25);
+    }
+  }
+
+  .index {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    flex-shrink: 0;
+    position: relative;
+    display: grid;
+    place-content: center;
+  }
+
+  .text-selected {
+    font-weight: 500;
+  }
+
+  .line {
+    border-top-width: 1px;
+    border-top-style: solid;
+    flex: auto;
+    height: 0;
+    margin: 0 -8px;
+    min-width: 32px;
+
+    &:last-of-type {
+      display: none;
+    }
+  }
+}
+
+.header-vertical {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  color: inherit;
+  min-height: 32px;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+
+  .label {
+    display: flex;
+    z-index: 2;
+    padding: 16px;
+    flex-wrap: wrap;
+    background-color: inherit;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    min-width: 70px;
+
+    &:hover {
+      filter: brightness(1.25);
+    }
+
+    span {
+      margin-bottom: 0px !important;
+      margin-left: 0px !important;
+    }
+  }
+
+  .index {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    flex-shrink: 0;
+    position: relative;
+    display: grid;
+    place-content: center;
+  }
+
+  .text-selected {
+    font-weight: 500;
+  }
+
+  .line {
+    border-top-width: 1px;
+    border-top-style: solid;
+    flex: auto;
+    height: 0;
+    margin: 8px 0px;
+    min-width: 32px;
+    transform: rotate(90deg);
+
+    &:last-of-type {
+      display: none;
+    }
+  }
+}

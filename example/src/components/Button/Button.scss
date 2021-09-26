@@ -1,0 +1,24 @@
+.Button {
+  padding: .6rem 1.5rem;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: .9rem;
+  background-color: #2196f3;
+  color: #fff;
+
+  &:hover:not([disabled]) {
+    filter: brightness(1.2);
+  }
+
+  &:active {
+    transform: scale(.96);
+  }
+
+  &[disabled] {
+    filter: brightness(.9);
+    cursor: not-allowed;
+  }
+
+}
