@@ -20,7 +20,13 @@ const App = () => {
     <div className='container'>
       <Header></Header>
       <Section title='Simple basic use'>
-        <Stepper>
+        <Stepper
+          headerStyles={{
+            activatedStepBackground: 'red',
+            color: '#fff',
+            lineColor: 'blue'
+          }}
+        >
           <Step>
             <h3>Step1</h3>
           </Step>

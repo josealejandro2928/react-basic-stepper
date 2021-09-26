@@ -125,6 +125,10 @@ export const Stepper = React.memo(
         stepChange(index);
       }
     }
+    headerStyles.activatedStepBackground = headerStyles.activatedStepBackground || '#3f51b5';
+    headerStyles.color = headerStyles.color || '#fff';
+    headerStyles.stepsBackgroud = headerStyles.stepsBackgroud || '#0000008a';
+    headerStyles.lineColor = headerStyles.lineColor || '#0000001f';
 
     return (
       <div className={classes[`stepper-${mode}`]}>
