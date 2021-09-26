@@ -2,6 +2,8 @@
 
 > A simple stepper provides a wizard-like workflow by dividing content into logical steps.
 
+![step1](https://react-basic-stepper.surge.sh/images/step3.png)
+
 ## Install
 
 ```bash
