@@ -253,6 +253,14 @@ export interface Steps {
 
 ### [Demo](https://react-basic-stepper.surge.sh/)
 
+### Related Pakages
+
+#### 1. [react-hook-modal](https://www.npmjs.com/package/react-hook-modal)
+
+#### 2. [tabs-react-component](https://www.npmjs.com/package/tabs-react-component)
+
+#### 3. [ngp-image-picker](https://www.npmjs.com/package/ngp-image-picker)
+
 ## License
 
 MIT © [josealejandro2928](https://github.com/josealejandro2928)

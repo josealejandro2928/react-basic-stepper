@@ -1,6 +1,6 @@
 {
   "name": "react-basic-stepper",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A simple stepper provides a wizard-like workflow by dividing content into logical steps.",
   "author": "josealejandro2928",
   "license": "MIT",
