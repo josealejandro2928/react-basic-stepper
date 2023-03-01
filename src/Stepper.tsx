@@ -20,6 +20,7 @@ export interface StepperProps {
   verticalLabels?: boolean;
   hideLabels?: boolean;
   hideLines?: boolean;
+  hideNumbers?: boolean;
   mode?: 'vertical' | 'horizontal';
 }
 export interface StepperRef {
@@ -38,6 +39,7 @@ export const Stepper = React.memo(
       verticalLabels = true,
       hideLabels = false,
       hideLines = false,
+      hideNumbers = false,
       mode = 'horizontal',
       headerStyles = {
         color: '#fff',
@@ -140,6 +142,7 @@ export const Stepper = React.memo(
           verticalLabels={verticalLabels}
           hideLabels={hideLabels}
           hideLines={hideLines}
+          hideNumbers={hideNumbers}
           mode={mode}
         />
 
@@ -214,6 +217,7 @@ export interface HeaderSteps {
   verticalLabels?: boolean;
   hideLabels?: boolean;
   hideLines?: boolean;
+  hideNumbers?: boolean;
   mode?: 'vertical' | 'horizontal';
 }
 
@@ -238,6 +242,7 @@ export const HeaderStep = React.memo(function ({
   verticalLabels = false,
   hideLines = false,
   hideLabels = false,
+  hideNumbers = false,
   mode = 'horizontal'
 }: HeaderSteps): JSX.Element {
   const headerEl = labels.map((label, index) => (
@@ -263,7 +268,7 @@ export const HeaderStep = React.memo(function ({
                 : headerStyles.stepsBackgroud
           }}
         >
-          {index + 1}
+          {hideNumbers ? '' : index + 1}
         </div>
         {label.label && !hideLabels && (
           <span

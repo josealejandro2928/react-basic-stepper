@@ -237,6 +237,7 @@ export interface StepperProps {
   verticalLabels?: boolean; // Allow Step header text labels to be placed at the bottom or to the right of the circles, default = true
   hideLabels?: boolean; // Allow to hide the text labels, default = false
   hideLines?: boolean; // Allow to hide the line between each step header circles, default = false
+  hideNumbers?: boolean; // Allow to hide the number inside of the step circle, default = false
   mode?: 'vertical' | 'horizontal'; // Allow to display the stepper 'vertical' or 'horizontal', default = 'horizontal'
 }
 export interface StepperRef {
