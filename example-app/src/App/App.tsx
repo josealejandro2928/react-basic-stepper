@@ -15,42 +15,74 @@ const App = () => {
       a ullam reiciendis fugiat nobis, dolores velit dolor illum sequi alias error expedita soluta omnis`
     }
   ]);
-  const [inputData, setInputData] = useState<any>({});
+  const [inputData, setInputData] = useState<any>({ label: "", content: "" });
+  const [config, setConfig] = useState<{
+    linearMode: boolean;
+    verticalLabels: boolean;
+    hideLabels: boolean;
+    hideLines: boolean;
+    hideNumbers: boolean;
+    mode: any;
+  }>({
+    linearMode: false, verticalLabels: true,
+    hideLabels: false, hideLines: false, hideNumbers: false,
+    mode: "horizontal"
+  });
   return (
     <div className='container'>
       <Header></Header>
       <Section title='Simple basic use'>
-        <Stepper>
-          <Step>
+        <Stepper {...config}>
+          <Step label='Step#1'>
             <h3>Step1</h3>
           </Step>
-          <Step>
+          <Step label='Step#2'>
             <h3>Step2</h3>
           </Step>
-          <Step>
+          <Step label='Step#3'>
             <h3>Step3</h3>
           </Step>
-          <Step>
+          <Step label='Step#4'>
             <h3>Step4</h3>
           </Step>
         </Stepper>
+        <hr />
+        <p>Config parameters</p>
+        <div style={{ display: "flex", width: 100, "alignItems": "center", "gap": "4px" }}>
+          <input type="checkbox" name="linearMode" id="linearMode" checked={config.linearMode} onChange={(e) => setConfig({ ...config, linearMode: e.target.checked })} />
+          <label htmlFor="linearMode"> linearMode</label>
+        </div>
+        <div style={{ display: "flex", width: 100, "alignItems": "center", "gap": "4px" }}>
+          <input type="checkbox" name="hideNumbers" id="hideNumbers" checked={config.hideNumbers} onChange={(e) => setConfig({ ...config, hideNumbers: e.target.checked })} />
+          <label htmlFor="hideNumbers"> hideNumbers</label>
+        </div>
+        <div style={{ display: "flex", width: 100, "alignItems": "center", "gap": "4px" }}>
+          <input type="checkbox" name="verticalLabels" id="verticalLabels" checked={config.verticalLabels} onChange={(e) => setConfig({ ...config, verticalLabels: e.target.checked })} />
+          <label htmlFor="verticalLabels"> verticalLabels</label>
+        </div>
+        <div style={{ display: "flex", width: 100, "alignItems": "center", "gap": "4px" }}>
+          <input type="checkbox" name="hideLabels" id="hideLabels" checked={config.hideLabels} onChange={(e) => setConfig({ ...config, hideLabels: e.target.checked })} />
+          <label htmlFor="hideLabels"> hideLabels</label>
+        </div>
+        <div style={{ display: "flex", width: 100, "alignItems": "center", "gap": "4px" }}>
+          <input type="checkbox" name="hideLines" id="hideLines" checked={config.hideLines} onChange={(e) => setConfig({ ...config, hideLines: e.target.checked })} />
+          <label htmlFor="hideLines"> hideLines</label>
+        </div>
+        <div style={{ display: "flex", width: 100, "alignItems": "center", "gap": "4px", marginTop: '16px' }}>
+          <label htmlFor="mode"> mode: </label>
+          <select name="mode" id="mode" value={config.mode} onChange={(e) => setConfig({ ...config, mode: (e.target.value ? e.target.value : "horizontal") })}>
+            <option value="horizontal" >
+              horizontal
+            </option>
+            <option value="vertical">
+              vertical
+            </option>
+          </select>
+
+        </div>
+
       </Section>
-      <Section title='Simple basic use with labels'>
-        <Stepper>
-          <Step label='Step #1'>
-            <h3>Step1</h3>
-          </Step>
-          <Step label='Lorem Isum..'>
-            <h3>Step2</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-              nesciunt eum, error explicabo alias, architecto beatae, ducimus
-              vitae optio repellat minima iure id quisquam eius voluptatem
-              voluptates. Iusto, accusamus mollitia!
-            </p>
-          </Step>
-        </Stepper>
-      </Section>
+
       <Section title='Vertical stepper'>
         <Stepper mode='vertical'>
           <Step label='Step #1'>
@@ -82,7 +114,8 @@ const App = () => {
           </Step>
         </Stepper>
       </Section>
-      <Section title='Dinamyc steps'>
+
+      <Section title='Dynamic steps'>
         <Stepper mode='horizontal'>
           {dynamicSteps.map((el, index) => (
             <Step key={index} label={el.label}>

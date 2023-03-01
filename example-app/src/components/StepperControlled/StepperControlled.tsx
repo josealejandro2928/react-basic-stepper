@@ -24,7 +24,7 @@ function StepperControlled(): JSX.Element {
     email: ''
   });
 
-  const [materialData, setMaterialData] = useState({
+  const [materialData, setMaterialData] = useState<any>({
     materials: {}
   });
 
