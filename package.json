@@ -1,6 +1,6 @@
 {
   "name": "react-basic-stepper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple stepper provides a wizard-like workflow by dividing content into logical steps.",
   "author": "josealejandro2928",
   "license": "MIT",
@@ -20,8 +20,7 @@
     "test:lint": "eslint .",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "release": "rm -rf ./dist && yarn build && cp ./LICENSE.md ./dist/ && cp ./README.md ./dist/"
   },
   "peerDependencies": {
     "react": "^17.0.0"
