@@ -1,4 +1,6 @@
-/* eslint-disable prettier/prettier */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/display-name */
 /* eslint-disable react/jsx-no-bind */
 import React, {
   // eslint-disable-next-line no-unused-vars

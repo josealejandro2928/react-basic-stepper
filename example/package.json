@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-basic-stepper": "../react-basic-stepper-1.0.4.tgz",
+    "react-basic-stepper": "../react-basic-stepper-1.0.5.tgz",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

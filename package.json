@@ -2,14 +2,20 @@
   "name": "react-basic-stepper",
   "version": "1.0.5",
   "description": "A simple stepper provides a wizard-like workflow by dividing content into logical steps.",
-  "author": "josealejandro2928",
+  "author": {
+    "name": "Jose Alejandro Concepcion Alvarez",
+    "url": "https://www.linkedin.com/in/jalejandroc/"
+  },
   "license": "MIT",
-  "repository": "josealejandro2928/react-basic-stepper",
+  "repository":{
+    "type": "git",
+    "url": "https://github.com/josealejandro2928/react-basic-stepper"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
   "engines": {
-    "node": ">=18"
+    "node": ">=16"
   },
   "scripts": {
     "build": "microbundle-crl --format modern,cjs",
@@ -20,10 +26,10 @@
     "test:lint": "eslint .",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "release": "rm -rf ./dist && yarn build && cp ./LICENSE.md ./dist/ && cp ./README.md ./dist/"
+    "release": "rm -rf ./dist && yarn build && cp ./LICENSE.md ./dist/ && cp ./README.md ./dist/ && npm publish"
   },
   "peerDependencies": {
-    "react": "^17.0.0"
+    "react": "^18.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",

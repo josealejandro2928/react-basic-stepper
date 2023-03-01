@@ -697,9 +697,9 @@ postcss@^8.4.21:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-react-basic-stepper@../react-basic-stepper-1.0.4.tgz:
-  version "1.0.4"
-  resolved "../react-basic-stepper-1.0.4.tgz#ad284b85cbf10e4f277537cde54d7fe615448952"
+react-basic-stepper@../react-basic-stepper-1.0.5.tgz:
+  version "1.0.5"
+  resolved "../react-basic-stepper-1.0.5.tgz#0f3350704298fddfd3f0a1ccc8aaeca3b12b13fb"
 
 react-dom@^18.2.0:
   version "18.2.0"
